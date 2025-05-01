@@ -36,13 +36,14 @@ public class CartService {
     }
 
     public Cart updateQuantity(String userId, String code, int quantity) {
+        System.out.println("inside update quantity");
         Cart cart = cartRepository.findByUserId(userId)
                 .orElseThrow(() -> new RuntimeException("Cart not found"));
         cart.getItems().stream()
                 .filter(item -> item.getCode().equals(code))
                 .findFirst()
                 .ifPresent(item -> item.setQuantity(quantity));
-
+        System.out.println("inside update total " + cart);
         updateTotal(cart);
         return cartRepository.save(cart);
     }
@@ -51,11 +52,14 @@ public class CartService {
         double total = cart.getItems().stream()
                 .mapToDouble(item -> (item.getMrp() - item.getDiscount()) * item.getQuantity())
                 .sum();
+                System.out.println("total "+ total);
         cart.setTotal(total);
     }
 
     private void updateCart(Cart cart, CartItem newItem) {
         // Check if the item already exists in the cart
+        System.out.println("cart " + cart);
+        System.out.println("new item "+ newItem);
         boolean found = false;
         for (CartItem item : cart.getItems()) {
             if (item.getCode().equals(newItem.getCode())) {
