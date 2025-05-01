@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://reddirani8496.github.io")
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {

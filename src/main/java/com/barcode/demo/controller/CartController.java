@@ -5,6 +5,7 @@ import com.barcode.demo.service.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "https://reddirani8496.github.io")
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
