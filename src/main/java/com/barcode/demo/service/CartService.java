@@ -55,6 +55,22 @@ public class CartService {
     }
 
     private void updateCart(Cart cart, CartItem newItem) {
-        // Add your logic for adding/updating items in the cart
+        // Check if the item already exists in the cart
+        boolean found = false;
+        for (CartItem item : cart.getItems()) {
+            if (item.getCode().equals(newItem.getCode())) {
+                // If found, increase the quantity
+                item.setQuantity(item.getQuantity() + newItem.getQuantity());
+                found = true;
+                break;
+            }
+        }
+        // If not found, add as a new item
+        if (!found) {
+            cart.getItems().add(newItem);
+        }
+        // Update the total after modifying the cart
+        updateTotal(cart);
     }
+    
 }
