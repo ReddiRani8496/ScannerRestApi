@@ -1,0 +1,10 @@
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/BarcodescannerApplication.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/controller/CartController.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/controller/ProductController.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/model/Cart.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/model/CartItem.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/model/Product.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/repository/CartRepository.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/repository/ProductRepository.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/service/CartService.java
+/home/reddirani/ScannerRestApi/src/main/java/com/barcode/demo/service/ProductService.java
